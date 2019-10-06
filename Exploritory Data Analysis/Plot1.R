@@ -13,5 +13,7 @@ str(NEI)
 aggTotals <- aggregate(Emissions ~ year,NEI, sum)
 dim(aggTotals)
 aggTotals
+png("plot1.png")
 plot(aggTotals$year, aggTotals$Emissions, xlab = "Years", ylab = "Emissions", main="Total PM2.5 Emissions over Years", type = "l")
+dev.off()
 
